@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zhiguo Yang | Research</title>
-  <meta name="description" content="Zhiguo Yang | Applied and Computational Mathematics | Shanghai Jiao Tong University">
+  <meta name="description" content="Zhiguo Yang | Research">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
   <div class="container topbar">
     <div class="brand">
@@ -16,15 +15,14 @@
       <div class="brand-sub">Applied and Computational Mathematics · Shanghai Jiao Tong University</div>
     </div>
     <nav class="nav" aria-label="Primary">
-      <a href="index.html" >Home</a>
+      <a href="index.html">Home</a>
       <a href="research.html" class="active">Research</a>
-      <a href="publications.html" >Publications</a>
-      <a href="teaching.html" >Teaching</a>
-      <a href="service.html" >Talks & Service</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="service.html">Talks & Service</a>
     </nav>
   </div>
 </header>
-
 
 <section class="hero">
   <div class="container hero-grid">
@@ -36,22 +34,26 @@
         for multiscale and multiphysics PDEs arising in wave propagation, charged-particle transport,
         liquid crystals, and quasiperiodic materials.
       </p>
+      <p class="hero-note">
+        A central emphasis is the design of <strong>structure-preserving spectral and spectral-element methods</strong>
+        for electromagnetic wave problems and plasma computation, together with asymptotic-preserving and
+        geometric integrators that remain accurate across parameter regimes.
+      </p>
       <div class="button-row">
         <a class="btn primary" href="ResearchStatement-ZhiguoYang.pdf">Full Research Statement</a>
         <a class="btn" href="publications.html">Selected Publications</a>
       </div>
     </div>
     <div class="panel">
-      <div class="label">Unifying Theme</div>
+      <div class="label">Unifying Question</div>
       <p>
-        A central question running through my work is:
-        <strong>how can one design computational methods that are simultaneously mathematically
-        reliable, physically faithful, and practical for genuinely multiscale and multiphysics systems?</strong>
+        How can one design computational methods that are simultaneously mathematically reliable,
+        physically faithful, and practical for genuinely multiscale and multiphysics systems?
       </p>
-      <p class="muted">
-        Across different applications, I focus on long-time accuracy, preservation of intrinsic
-        structures, parameter robustness, and computational efficiency.
-      </p>
+      <div class="meta-list">
+        <div class="meta-item"><strong>Structures preserved</strong><br>Divergence constraints, Gauss's law, conservation laws, asymptotic limits, quasiperiodicity, and manifold geometry.</div>
+        <div class="meta-item"><strong>Typical tools</strong><br>Spectral and spectral-element discretization, exact or semi-exact subflows, particle-in-cell methods, and geometric time integration.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -63,11 +65,24 @@
       <p>
         Although the physical models I study are diverse, they share a common mathematical core:
         highly oscillatory and multiscale PDE systems involving transport, wave propagation,
-        self-consistent field interactions, internal microstructure, geometric constraints, and,
-        in many cases, relaxation or dissipation. My work aims to construct algorithms that
-        remain accurate across regimes while preserving the key analytical and physical structures
-        of the equations.
+        self-consistent field interactions, internal microstructure, geometric constraints,
+        and in many cases relaxation or dissipation. My work aims to construct algorithms that
+        remain accurate across regimes while preserving key analytical and physical structures.
       </p>
+      <div class="research-focus">
+        <div class="focus-box">
+          <h3>Wave computation</h3>
+          <p>Structure-preserving spectral and spectral-element methods with exact curl/divergence information and robust treatment of unbounded domains.</p>
+        </div>
+        <div class="focus-box">
+          <h3>Transport and plasma</h3>
+          <p>Analytically solvable and asymptotic-preserving schemes for kinetic systems with severe scale separation.</p>
+        </div>
+        <div class="focus-box">
+          <h3>Complex materials</h3>
+          <p>Projection and geometric-discrete-gradient methods for quasiperiodicity, anisotropy, and manifold constraints.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -75,17 +90,22 @@
 <section class="section alt" id="waves">
   <div class="container two-col">
     <div>
-      <h2>1. Electromagnetic Wave Problems</h2>
+      <h2>1. Structure-Preserving Spectral and Spectral-Element Methods for Electromagnetic Waves</h2>
       <p>
-        I have developed structure-preserving spectral and spectral-element methods for curl-curl
-        equations and Maxwell systems, with emphasis on divergence constraints, Gauss's law,
-        high-order accuracy, and robust solvers for highly oscillatory regimes.
+        I have developed structure-preserving spectral and spectral-element methods for curl-curl equations
+        and Maxwell systems, with emphasis on divergence constraints, Gauss's law, high-order accuracy,
+        and robust solvers for highly oscillatory regimes.
       </p>
       <ul class="clean-list">
-        <li>Structure-preserving divergence-free spectral bases in two and three dimensions.</li>
+        <li>Divergence-free spectral bases in two and three dimensions for curl-curl problems.</li>
         <li>Gauss's-law-preserving spectral methods for Maxwell double-curl source and eigenvalue problems.</li>
-        <li>Accurate truncation techniques for scattering in unbounded domains, including perfect absorbing layers and nonreflecting boundary treatments.</li>
+        <li>High-order and accurate truncation techniques for scattering in unbounded domains, including exact perfect absorbing layers and time-domain nonreflecting boundary conditions.</li>
+        <li>Related work on incompressible magnetohydrodynamics using pointwise divergence-free spectral discretization.</li>
       </ul>
+      <div class="callout-note">
+        This direction is one of the clearest signatures of my research profile: using spectral and spectral-element ideas
+        to build high-order algorithms that preserve intrinsic field structure rather than treating it as a post-processing issue.
+      </div>
     </div>
     <div class="panel">
       <div class="label">Representative Publications</div>
@@ -93,6 +113,7 @@
         <li><strong>SIAM Journal on Scientific Computing</strong> (2024): divergence-free spectral method for the curl-curl equation.</li>
         <li><strong>CSIAM Transactions on Applied Mathematics</strong> (2025): Gauss's-law-preserving spectral algorithms for Maxwell problems.</li>
         <li><strong>SIAM Journal on Scientific Computing</strong> (2021): exact and optimal perfect absorbing layer for time-harmonic acoustic wave scattering.</li>
+        <li><strong>Journal of Scientific Computing</strong> (2021): time-domain nonreflecting boundary conditions for Maxwell's equations.</li>
       </ul>
     </div>
   </div>
@@ -123,6 +144,7 @@
         <li><strong>Journal of Computational Physics</strong> (2026): analytically solvable and energy-conserving splitting for quasi-neutral Vlasov-Poisson.</li>
         <li><strong>Journal of Computational Physics</strong> (2023): energy-conserving Fourier PIC method with asymptotic-preserving preconditioner for Vlasov-Ampère.</li>
         <li><strong>Journal of Mathematical Physics</strong> (2023): asymptotic-preserving and energy-conserving PIC method for Vlasov-Maxwell.</li>
+        <li><strong>Submitted</strong> (2026): parameter-oriented splitting with exact subflows for the multiscale relativistic Vlasov-Maxwell system.</li>
       </ul>
     </div>
   </div>
@@ -140,8 +162,8 @@
       <ul class="clean-list">
         <li>Reduced projection methods for quasiperiodic Schrödinger eigenvalue problems in moiré lattices.</li>
         <li>Numerical and theoretical discovery of low-dimensional compact states in 3D moiré lattices.</li>
-        <li>Second-order rotational discrete-gradient methods that preserve geometric constraints and dissipate energy for Oseen-Frank and biaxial liquid-crystal gradient flows.</li>
-        <li>Extension of the structure-preserving framework toward the full Ericksen-Leslie model.</li>
+        <li>Second-order rotational discrete-gradient methods that preserve geometric constraints and dissipate energy for Oseen–Frank and biaxial liquid-crystal gradient flows.</li>
+        <li>Extension of the structure-preserving framework toward the full Ericksen–Leslie model.</li>
       </ul>
     </div>
     <div class="panel">
@@ -149,7 +171,7 @@
       <ul class="compact-list">
         <li><strong>Nature Communications</strong> (2025): low-dimensional compact states in 3D moiré lattices.</li>
         <li><strong>Journal of Scientific Computing</strong> (2025): reduced projection method for photonic moiré lattices.</li>
-        <li><strong>Communications in Computational Physics</strong> (2024): second-order length-preserving and energy-stable rotational discrete gradient method for Oseen-Frank gradient flows.</li>
+        <li><strong>Communications in Computational Physics</strong> (2024): second-order length-preserving and energy-stable rotational discrete gradient method for Oseen–Frank gradient flows.</li>
         <li><strong>Journal of Scientific Computing</strong> (2024): SO(3)-preserving and energy-stable scheme for biaxial nematic liquid crystals.</li>
       </ul>
     </div>
@@ -162,18 +184,14 @@
       <h2>Future Directions</h2>
       <p>
         Looking ahead, I plan to further develop the ASAP framework into a broader methodology
-        for oscillatory multiscale computation. Two directions are particularly important.
+        for oscillatory multiscale computation, including quantum transport models and collisional
+        kinetic equations.
       </p>
-      <ol class="clean-list">
-        <li>
-          Extending analytically solvable and asymptotic-preserving ideas to quantum transport models,
-          coupled quantum-electromagnetic systems, and collisional kinetic equations.
-        </li>
-        <li>
-          Combining reduced-order modeling and scientific machine learning with the structure-preserving
-          philosophy, so that reduced models inherit conservation laws, asymptotic limits, and physical constraints.
-        </li>
-      </ol>
+      <p>
+        A second direction is to combine reduced-order modeling and scientific machine learning with
+        the structure-preserving philosophy, so that reduced models inherit conservation laws,
+        asymptotic limits, and physical constraints.
+      </p>
     </div>
     <div class="panel">
       <div class="label">Research Documents</div>
@@ -185,15 +203,14 @@
   </div>
 </section>
 
-
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <h3>Zhiguo Yang</h3>
       <p class="notice">
         Associate Professor, School of Mathematical Sciences, Shanghai Jiao Tong University.
-        Research interests include scientific computing, numerical analysis, multiscale PDEs,
-        structure-preserving algorithms, electromagnetic-kinetic transport, liquid crystals, and moiré materials.
+        Research interests include structure-preserving spectral and spectral-element methods,
+        multiscale PDEs, electromagnetic-kinetic transport, liquid crystals, and moiré materials.
       </p>
       <div class="footer-links">
         <a href="ZhiguoYangCV.pdf">Curriculum Vitae</a>
@@ -210,6 +227,5 @@
     </div>
   </div>
 </footer>
-
 </body>
 </html>
