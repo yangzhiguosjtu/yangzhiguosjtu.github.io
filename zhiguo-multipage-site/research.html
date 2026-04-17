@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhiguo Yang | Research</title>
+  <meta name="description" content="Zhiguo Yang | Applied and Computational Mathematics | Shanghai Jiao Tong University">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container topbar">
+    <div class="brand">
+      <a class="brand-title" href="index.html">Zhiguo Yang</a>
+      <div class="brand-sub">Applied and Computational Mathematics · Shanghai Jiao Tong University</div>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" >Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="publications.html" >Publications</a>
+      <a href="teaching.html" >Teaching</a>
+      <a href="service.html" >Talks & Service</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Research</div>
+      <h1>Research Program</h1>
+      <p class="lead">
+        My research develops high-order, efficient, and structure-preserving numerical methods
+        for multiscale and multiphysics PDEs arising in wave propagation, charged-particle transport,
+        liquid crystals, and quasiperiodic materials.
+      </p>
+      <div class="button-row">
+        <a class="btn primary" href="ResearchStatement-ZhiguoYang.pdf">Full Research Statement</a>
+        <a class="btn" href="publications.html">Selected Publications</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="label">Unifying Theme</div>
+      <p>
+        A central question running through my work is:
+        <strong>how can one design computational methods that are simultaneously mathematically
+        reliable, physically faithful, and practical for genuinely multiscale and multiphysics systems?</strong>
+      </p>
+      <p class="muted">
+        Across different applications, I focus on long-time accuracy, preservation of intrinsic
+        structures, parameter robustness, and computational efficiency.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="panel">
+      <h2>Overview</h2>
+      <p>
+        Although the physical models I study are diverse, they share a common mathematical core:
+        highly oscillatory and multiscale PDE systems involving transport, wave propagation,
+        self-consistent field interactions, internal microstructure, geometric constraints, and,
+        in many cases, relaxation or dissipation. My work aims to construct algorithms that
+        remain accurate across regimes while preserving the key analytical and physical structures
+        of the equations.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="waves">
+  <div class="container two-col">
+    <div>
+      <h2>1. Electromagnetic Wave Problems</h2>
+      <p>
+        I have developed structure-preserving spectral and spectral-element methods for curl-curl
+        equations and Maxwell systems, with emphasis on divergence constraints, Gauss's law,
+        high-order accuracy, and robust solvers for highly oscillatory regimes.
+      </p>
+      <ul class="clean-list">
+        <li>Structure-preserving divergence-free spectral bases in two and three dimensions.</li>
+        <li>Gauss's-law-preserving spectral methods for Maxwell double-curl source and eigenvalue problems.</li>
+        <li>Accurate truncation techniques for scattering in unbounded domains, including perfect absorbing layers and nonreflecting boundary treatments.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="label">Representative Publications</div>
+      <ul class="compact-list">
+        <li><strong>SIAM Journal on Scientific Computing</strong> (2024): divergence-free spectral method for the curl-curl equation.</li>
+        <li><strong>CSIAM Transactions on Applied Mathematics</strong> (2025): Gauss's-law-preserving spectral algorithms for Maxwell problems.</li>
+        <li><strong>SIAM Journal on Scientific Computing</strong> (2021): exact and optimal perfect absorbing layer for time-harmonic acoustic wave scattering.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kinetic">
+  <div class="container two-col">
+    <div>
+      <h2>2. Electromagnetic-Kinetic Transport</h2>
+      <p>
+        A major part of my current work concerns multiscale kinetic plasma and charged-particle transport models,
+        especially Vlasov-Poisson, Vlasov-Ampère, and Vlasov-Maxwell systems in regimes with severe scale separation.
+      </p>
+      <p>
+        In this direction I developed an ASAP-style viewpoint: rather than resolving dominant collective oscillations
+        by brute-force over-discretization, identify the mechanisms producing stiffness and integrate them analytically
+        whenever possible.
+      </p>
+      <ul class="clean-list">
+        <li>Analytically solvable, waveform asymptotic-preserving time-splitting for Vlasov-Poisson in the quasi-neutral regime.</li>
+        <li>Energy-conserving and asymptotic-preserving particle-in-cell algorithms for Vlasov-Ampère and Vlasov-Maxwell systems.</li>
+        <li>Parameter-oriented splitting with exact or variation-of-constants subflows for the multiscale relativistic Vlasov-Maxwell system.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="label">Representative Publications</div>
+      <ul class="compact-list">
+        <li><strong>Journal of Computational Physics</strong> (2026): analytically solvable and energy-conserving splitting for quasi-neutral Vlasov-Poisson.</li>
+        <li><strong>Journal of Computational Physics</strong> (2023): energy-conserving Fourier PIC method with asymptotic-preserving preconditioner for Vlasov-Ampère.</li>
+        <li><strong>Journal of Mathematical Physics</strong> (2023): asymptotic-preserving and energy-conserving PIC method for Vlasov-Maxwell.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="condensed">
+  <div class="container two-col">
+    <div>
+      <h2>3. Liquid Crystals and Moiré Materials</h2>
+      <p>
+        I also work on computational methods for condensed-matter systems where microstructure,
+        anisotropy, symmetry, and quasiperiodicity are central. These include liquid crystals and
+        photonic moiré lattices.
+      </p>
+      <ul class="clean-list">
+        <li>Reduced projection methods for quasiperiodic Schrödinger eigenvalue problems in moiré lattices.</li>
+        <li>Numerical and theoretical discovery of low-dimensional compact states in 3D moiré lattices.</li>
+        <li>Second-order rotational discrete-gradient methods that preserve geometric constraints and dissipate energy for Oseen-Frank and biaxial liquid-crystal gradient flows.</li>
+        <li>Extension of the structure-preserving framework toward the full Ericksen-Leslie model.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="label">Representative Publications</div>
+      <ul class="compact-list">
+        <li><strong>Nature Communications</strong> (2025): low-dimensional compact states in 3D moiré lattices.</li>
+        <li><strong>Journal of Scientific Computing</strong> (2025): reduced projection method for photonic moiré lattices.</li>
+        <li><strong>Communications in Computational Physics</strong> (2024): second-order length-preserving and energy-stable rotational discrete gradient method for Oseen-Frank gradient flows.</li>
+        <li><strong>Journal of Scientific Computing</strong> (2024): SO(3)-preserving and energy-stable scheme for biaxial nematic liquid crystals.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <h2>Future Directions</h2>
+      <p>
+        Looking ahead, I plan to further develop the ASAP framework into a broader methodology
+        for oscillatory multiscale computation. Two directions are particularly important.
+      </p>
+      <ol class="clean-list">
+        <li>
+          Extending analytically solvable and asymptotic-preserving ideas to quantum transport models,
+          coupled quantum-electromagnetic systems, and collisional kinetic equations.
+        </li>
+        <li>
+          Combining reduced-order modeling and scientific machine learning with the structure-preserving
+          philosophy, so that reduced models inherit conservation laws, asymptotic limits, and physical constraints.
+        </li>
+      </ol>
+    </div>
+    <div class="panel">
+      <div class="label">Research Documents</div>
+      <div class="meta-list">
+        <div class="meta-item"><a href="ResearchStatement-ZhiguoYang.pdf">Download research statement (PDF)</a></div>
+        <div class="meta-item"><a href="ZhiguoYangCV.pdf">Download CV (PDF)</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Zhiguo Yang</h3>
+      <p class="notice">
+        Associate Professor, School of Mathematical Sciences, Shanghai Jiao Tong University.
+        Research interests include scientific computing, numerical analysis, multiscale PDEs,
+        structure-preserving algorithms, electromagnetic-kinetic transport, liquid crystals, and moiré materials.
+      </p>
+      <div class="footer-links">
+        <a href="ZhiguoYangCV.pdf">Curriculum Vitae</a>
+        <a href="ResearchStatement-ZhiguoYang.pdf">Research Statement</a>
+        <a href="TeachingStatement-ZhiguoYang.pdf">Teaching Statement</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="label">Contact</div>
+      <div class="meta-list">
+        <div class="meta-item"><strong>Email</strong><br><a href="mailto:yangzhiguo@sjtu.edu.cn">yangzhiguo@sjtu.edu.cn</a></div>
+        <div class="meta-item"><strong>Office</strong><br>School of Mathematical Sciences, Shanghai Jiao Tong University<br>800 Dongchuan Road, Minhang, Shanghai 200240, China</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
